@@ -178,7 +178,8 @@ echo
 
 	echo "copy nanorc"
 	cp nanorc 	$buildFolder/archiso/airootfs/etc/nanorc
-
+   # cp -f pacman.conf $buildFolder/archiso/pacman.conf
+   # cp -f arcolinux-mirrorlist $buildFolder/archiso/airootfs/etc/pacman.d/arcolinux-mirrorlist
 #echo
 #echo "################################################################## "
 #tput setaf 2
