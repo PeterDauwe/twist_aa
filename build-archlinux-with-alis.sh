@@ -135,7 +135,7 @@ echo
 	echo
 	echo "Git clone ALIS + ALIS-DEV"
 	mkdir $buildFolder/archiso/airootfs/alis
-	git clone https://github.com/PeterDauwe/twist_alis $buildFolder/archiso/airootfs/twist_alis
+	git clone https://github.com/PeterDauwe/twist_alis $buildFolder/archiso/airootfs/alis
 	#mkdir $buildFolder/archiso/airootfs/alis-dev
 	#git clone https://github.com/arcolinuxiso/alis-dev $buildFolder/archiso/airootfs/alis-dev
 
@@ -169,7 +169,7 @@ echo
 	echo "Arch Linux iso build on : "$date_build | tee -a $buildFolder/archiso/airootfs/etc/dev-rel
 
 	FIND='livecd-sound'
-	REPLACE='  ["/twist_alis/start.sh"]="0:0:755"'
+	REPLACE='  ["/alis/start.sh"]="0:0:755"'
 	find $buildFolder/archiso/profiledef.sh -type f -exec sed -i "/$FIND/a $REPLACE" {} \;
 
 #	FIND='livecd-sound'
